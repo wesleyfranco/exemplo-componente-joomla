@@ -1,0 +1,1 @@
+# exemplo-componente-joomla

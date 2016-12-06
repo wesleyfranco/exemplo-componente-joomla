@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_empresas</name>
+	<author>Wesley Silva</author>
+	<creationDate>Novembro 2016</creationDate>
+	<copyright>(C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>wesley@y2studio.com.br</authorEmail>
+	<authorUrl>www.y2studio.com.br</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_EMPRESAS_XML_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="frontend">
+		<filename>empresas.php</filename>
+		<folder>Controller</folder>
+		<folder>Model</folder>
+		<folder>View</folder>
+		<folder>views</folder>
+	</files>
+	<administration>
+		<menu img="class:empresas">com_empresas</menu>
+		<submenu>
+			<menu
+				link="option=com_empresas&amp;view=categories"
+				view="categories"
+				img="class:empresas-categories"
+				alt="Empresas/Categories"
+				>
+				com_empresas_categories
+			</menu>
+			<menu
+				link="option=com_empresas&amp;view=companies"
+				view="companies"
+				img="class:empresas-companies"
+				alt="Empresas/Companies"
+				>
+				com_empresas_companies
+			</menu>
+		</submenu>
+		<files folder="backend">
+			<filename>access.xml</filename>
+			<filename>empresas.php</filename>
+			<filename>config.xml</filename>
+			<filename>fof.xml</filename>
+			<folder>Controller</folder>
+			<folder>Model</folder>
+			<folder>View</folder>
+			<folder>Helper</folder>
+			<folder>sql</folder>
+		</files>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_empresas.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_empresas.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_empresas.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_empresas.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

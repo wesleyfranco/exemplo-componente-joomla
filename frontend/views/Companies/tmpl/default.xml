@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EMPRESAS_COMPANIES_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_EMPRESAS_COMPANIES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" label="COM_EMPRESAS_COMPANIES_LAYOUT_DEFAULT_OPTIONS">
+			<field name="num_empresas_por_pagina" type="text"
+				description="COM_EMPRESAS_COMPANIES_LAYOUT_DEFAULT_DESC"
+				label="COM_EMPRESAS_COMPANIES_LAYOUT_DEFAULT_LABEL"
+				size="3"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

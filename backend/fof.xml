@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fof>
+    <!-- Common settings -->
+    <common>
+        <!-- Container configuration -->
+        <container>
+            <option name="componentNamespace"><![CDATA[Y2Studio\Empresas]]></option>
+			<option name="factoryClass">FOF30\Factory\MagicFactory</option>
+			<option name="scaffolding">0</option>
+        </container>
+		<dispatcher>
+            <option name="defaultView">categories</option>
+        </dispatcher>
+    </common>
+
+    <!-- Component backend options -->
+    <backend>
+        <!-- The same options as Common Settings apply here, too -->
+    </backend>
+
+    <!-- Component frontend options -->
+    <frontend>
+        <container>
+            <option name="factoryClass">FOF30\Factory\BasicFactory</option>
+            <option name="scaffolding">0</option>
+		</container>
+    </frontend>
+</fof>

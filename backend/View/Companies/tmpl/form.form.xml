@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fieldset
+            addfieldpath="/administrator/components/com_empresas/Model/Fields"
+			name="basic_configuration"
+            label="COM_EMPRESAS_COMPANIES_BASIC_TITLE"
+            class="span6"
+            >
+
+        <field
+            name="nome"
+            type="Text"
+            label="COM_EMPRESAS_COMPANIES_FIELD_NAME"
+            hint="COM_EMPRESAS_COMPANIES_FIELD_NAME"
+            class="input-xlarge"
+            required="true"
+            />
+		
+		<field
+            name="localizacao"
+            type="Text"
+            label="COM_EMPRESAS_COMPANIES_FIELD_LOCALIZACION"
+            hint="COM_EMPRESAS_COMPANIES_FIELD_LOCALIZACION"
+            class="input-xlarge"
+            required="true"
+            />	
+		
+		<field 
+			name="imagem" 
+			type="media" 
+			directory="stories/com_empresas"
+			label="COM_EMPRESAS_COMPANIES_FIELD_IMAGE"
+            hint="COM_EMPRESAS_COMPANIES_FIELD_IMAGE"
+			required="false"
+			preview="tooltip" 
+			preview_width="100" 
+			preview_height="100"
+		/>		
+
+		<field 
+			name="empresas_category_id" 
+			type="CategoryList" 
+			label="COM_EMPRESAS_COMPANIES_FIELD_CATEGORIES"			
+			required="true" 
+			/>
+		
+		<field
+            name="publish_up"
+            type="Calendar"
+            label="COM_EMPRESAS_PUBLISH_UP"
+            hint="COM_EMPRESAS_PUBLISH_UP"
+            required="false"
+			default="NOW"
+			format="%d-%m-%Y"
+            />
+
+        <field
+            name="publish_down"
+            type="Calendar"
+            label="COM_EMPRESAS_PUBLISH_DOWN"
+            hint="COM_EMPRESAS_PUBLISH_DOWN"
+            required="false"
+			format="%d-%m-%Y"
+		/>		
+    </fieldset>
+</form>

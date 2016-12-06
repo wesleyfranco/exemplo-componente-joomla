@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form
+        type="browse"
+        show_header="1"
+        show_filters="1"
+        show_pagination="1"
+        norows_placeholder="COM_EMPRESAS_COMMON_NORECORDS"
+
+        >
+    <headerset>
+
+		<header name="ordering" type="Ordering" sortable="true" tdwidth="20px" />
+	
+        <header name="empresas_company_id" type="RowSelect" tdwidth="20px" />
+
+        <header name="empresas_company_id" type="Field" tdwidth="20px" label="#" id="num" />
+
+        <header name="nome" type="Searchable" sortable="true"
+                filterclass="input-small"
+                label="COM_EMPRESAS_COMPANIES_NAME"
+                />
+
+        <header name="localizacao" type="Field" sortable="true"               
+                label="COM_EMPRESAS_COMPANIES_LOCALIZACION"
+                />
+		<header name="slug" type="Field" sortable="true"               
+                label="COM_EMPRESAS_CATEGORIES_SLUG"
+                />
+			
+		<header name="imagem" type="Field" sortable="true"               
+                label="COM_EMPRESAS_CATEGORIES_IMAGE"
+                />
+		
+		<header
+			name="titulo" type="Model"
+			model="Categories"
+			key_field="empresas_category_id"
+			value_field="titulo"
+			translate="false"
+			apply_access="true"
+			label="COM_EMPRESAS_CATEGORY_BASIC_TITLE"	
+		/>
+	
+		<header name="publish_up" type="Field" sortable="true"
+                label="COM_EMPRESAS_PUBLISH_UP"
+                />
+
+        <header name="publish_down" type="Field" sortable="true"
+                label="COM_EMPRESAS_PUBLISH_DOWN"
+                />
+
+        <header name="enabled" type="Published" sortable="true" tdwidth="8%"
+                label="JPUBLISHED"
+		/>		
+
+    </headerset>
+
+    <fieldset name="items">      
+
+        <field name="ordering" type="Ordering" labelclass="order"/>
+		
+		<field name="empresas_company_id" type="SelectRow"/>
+
+        <field name="empresas_company_id" type="Text" id="num" />
+
+        <field name="nome" type="Text"
+               show_link="true"
+               url="index.php?option=com_empresas&amp;view=company&amp;id=[ITEM:ID]"
+                />
+		
+		<field 
+			name="localizacao" 
+			type="Text"              
+                />
+       
+	    <field name="slug" type="Text"
+               format="&lt;b&gt;%s&lt;/b&gt;"
+               show_link="true"
+               url="index.php?option=com_empresas&amp;view=company&amp;id=[ITEM:ID]"
+                />
+		
+		<field name="imagem" 
+			type="Image"
+			width="100" 
+			height="100"	
+                />
+				
+		<field name="category" 
+			type="Relation" 
+			value_field="titulo" 
+			url="index.php?option=com_empresas&amp;view=category&amp;id=[RELATION:ID]"
+                />		
+								
+		<field name="publish_up" type="Calendar" format="%d-%m-%Y" />
+
+        <field name="publish_down" type="Calendar" format="%d-%m-%Y" />
+		
+		<field name="enabled" type="Published"/>		
+    </fieldset>
+</form>

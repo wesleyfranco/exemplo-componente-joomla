@@ -15,7 +15,8 @@ class Companies extends \Y2Studio\Empresas\Admin\Model\Companies
 		$query
 			->select(array(
 				$db->qn('e') . '.*',
-				$db->qn('c') . '.titulo'
+				$db->qn('c') . '.titulo',
+				$db->qn('c') . '.slug AS catSlug'
 			))
 			->from($db->qn('#__empresas_companies') . ' AS ' . $db->qn('e'))
 			->join('INNER', $db->qn('#__empresas_categories_companies') . ' AS ' . $db->qn('cc') . ' ON ' .
